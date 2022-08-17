@@ -115,12 +115,9 @@ const bankTwo = [
 
 //my code starts
 function App() {
-    function playSound(url) {
-        const audio = new Audio(url);
+    function playSound(e) {
+        const audio = document.getElementById(e.target.outerText);
         audio.play();
-        setTimeout(() => {
-            audio.pause();
-        }, 1000);
     }
     return (
         <>
@@ -131,9 +128,7 @@ function App() {
                         return (
                             <div
                                 className="drum-pad"
-                                onClick={() => {
-                                    playSound(element.url);
-                                }}
+                                onClick={playSound}
                                 id={element.id}
                             >
                                 {element.keyTrigger}
