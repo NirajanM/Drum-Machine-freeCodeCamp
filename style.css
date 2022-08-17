@@ -37,3 +37,26 @@ body {
     font-size: larger;
     font-weight: 900;
 }
+
+#display {
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    color: #ffb703;
+    margin-top: 2rem;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    color: #ffb703;
+    margin-bottom: 2rem;
+}
