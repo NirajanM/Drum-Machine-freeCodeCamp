@@ -115,6 +115,19 @@ const bankTwo = [
 
 //my code starts
 function App() {
+    React.useEffect(() => {
+        addEventListener('keypress', handleKeyPress);
+    }, []);
+
+    function handleKeyPress(e) {
+        const pad = bankOne.find(
+            (item) => {
+                return (item.keyTrigger === e.key.toUpperCase())
+            }
+        );
+        pad && document.getElementById(pad.id).click();
+    }
+
     function playSound(e) {
         const audio = document.getElementById(e.target.outerText);
         audio.play();
