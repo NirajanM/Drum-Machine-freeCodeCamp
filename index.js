@@ -79,7 +79,7 @@ function App() {
         const audio = document.getElementById(e.target.outerText);
         audio.play();
         document.getElementById("drum-machine").style.boxShadow = "0px 0px 23px 5px white";
-        document.getElementById("display").style.boxShadow = "0px 0px 13px 3px #fb8500";
+        document.getElementById("display").style.boxShadow = "0px 0px 18px 1px white";
         setTimeout(() => {
             setText("");
             document.getElementById("drum-machine").style.boxShadow = "none";
