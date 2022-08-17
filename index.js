@@ -115,19 +115,37 @@ const bankTwo = [
 
 //my code starts
 function App() {
-
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+        setTimeout(() => {
+            audio.pause();
+        }, 1000);
+    }
     return (
         <>
             <div id="drum-machine">
                 <div id="display"></div>
-                {bankOne.map((element) => {
-                    return (
-                        <div
-                            className="drum-pad"
-                            id={element.id}
-                        >{element.keyTrigger}</div>
-                    )
-                })}
+                <div id="buttonsHolder">
+                    {bankOne.map((element) => {
+                        return (
+                            <div
+                                className="drum-pad"
+                                onClick={() => {
+                                    playSound(element.url);
+                                }}
+                                id={element.id}
+                            >
+                                {element.keyTrigger}
+                                <audio
+                                    className='clip'
+                                    id={element.keyTrigger}
+                                    src={element.url}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </>
     )

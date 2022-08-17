@@ -5,10 +5,22 @@ body {
 }
 
 body {
-    background-color: rgb(180, 231, 231);
+    background-color: #219ebc;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#drum-machine {
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: #023047;
+    border-radius: 10px;
 }
